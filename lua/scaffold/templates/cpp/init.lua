@@ -142,6 +142,7 @@ local cpp_cmake = {
     [".clangd"] = function(ctx)
       return editor.clangd("c++" .. (ctx.standard or "23"))
     end,
+    [".clang-format"] = editor.clang_format,
     ["README.md"] = table.concat({
       "# {{project_name}}",
       "",
@@ -249,6 +250,7 @@ local cpp_make = {
     [".clangd"] = function(ctx)
       return editor.clangd("c++" .. (ctx.standard or "23"))
     end,
+    [".clang-format"] = editor.clang_format,
     ["README.md"] = table.concat({
       "# {{project_name}}",
       "",

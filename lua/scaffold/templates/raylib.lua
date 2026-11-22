@@ -157,6 +157,7 @@ return {
         [".clangd"] = function(ctx)
           return editor.clangd("c++" .. (ctx.standard or "20"))
         end,
+        [".clang-format"] = editor.clang_format,
         [".gitignore"] = gitignore,
         ["README.md"] = readme,
       },
@@ -199,6 +200,7 @@ return {
         [".clangd"] = function(ctx)
           return editor.clangd("c" .. (ctx.standard or "17"), "c-header")
         end,
+        [".clang-format"] = editor.clang_format,
         [".gitignore"] = gitignore,
         ["README.md"] = readme,
       },

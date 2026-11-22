@@ -116,10 +116,11 @@ Other floating screens use `q` to close; some add `r` (refresh) or `i`
   Remove a project from the registry. Project files are NOT deleted.
 
 :ScaffoldRepair [{project|dir}]                             *:ScaffoldRepair*
-  Add the editor/toolchain hints (`compile_flags.txt`, `.clangd`) to an
-  existing C/C++ project that was created before they existed. The language and
-  standard are read from `CMakeLists.txt` (CMAKE_CXX_STANDARD / LANGUAGES) or
-  from the Makefile's `-std=` flag. Existing files are never overwritten.
+  Add the editor/toolchain hints (`compile_flags.txt`, `.clangd`,
+  `.clang-format`) to an existing C/C++ project that was created before they
+  existed. The language and standard are read from `CMakeLists.txt`
+  (CMAKE_CXX_STANDARD / LANGUAGES) or from the Makefile's `-std=` flag. Existing
+  files are never overwritten.
   Defaults to the current directory (or the registered project containing it).
 
 :ScaffoldCancel                                             *:ScaffoldCancel*

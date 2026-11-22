@@ -73,6 +73,7 @@ local c_cmake = {
     [".clangd"] = function(ctx)
       return editor.clangd("c" .. (ctx.standard or "17"), "c-header")
     end,
+    [".clang-format"] = editor.clang_format,
     ["README.md"] = table.concat({
       "# {{project_name}}",
       "",
@@ -154,6 +155,7 @@ local c_make = {
     [".clangd"] = function(ctx)
       return editor.clangd("c" .. (ctx.standard or "17"), "c-header")
     end,
+    [".clang-format"] = editor.clang_format,
     ["README.md"] = table.concat({
       "# {{project_name}}",
       "",

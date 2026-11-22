@@ -16,6 +16,9 @@ All notable changes to Scaffold.nvim are documented here. The format follows
   - `.clangd`: parses headers in the project's own language
     (`-xc++-header` for C++, `-xc-header` for C) instead of clangd's C++
     default for `.h`.
+  - `.clang-format`: a project-local formatting style, copied from
+    `~/.clang-format` when present (otherwise a prettier-like default: 4-space
+    indent, attached braces, no column limit), so clones format consistently.
 - C++26 as a standard option in `cpp-cmake` and `cpp-make`.
 - New templates: `cpp-qt` (Qt 6 Widgets or Qt Quick/QML), `cpp-raylib`,
   `c-raylib`, `python-uv` (`cli` or `fastapi`, virtualenv managed by uv),
@@ -24,8 +27,8 @@ All notable changes to Scaffold.nvim are documented here. The format follows
 - Runtime/tool entries for `uv`, `lua`, `luajit`, `luarocks`, `luacheck`,
   `busted`, with pacman/apt install mappings.
 - `:ScaffoldRepair [project|dir]`: backfills `compile_flags.txt` + `.clangd`
-  into existing C/C++ projects, reading the language/standard from
-  `CMakeLists.txt` or the Makefile. Never overwrites files.
+  + `.clang-format` into existing C/C++ projects, reading the language/standard
+  from `CMakeLists.txt` or the Makefile. Never overwrites files.
 - Standard/compiler compatibility check before creating a project: C++26 needs
   GCC >= 15 / Clang >= 21 / CMake >= 3.30 (C++23: 13 / 17 / 3.20, and so on).
   The error names the detected version and what to upgrade.

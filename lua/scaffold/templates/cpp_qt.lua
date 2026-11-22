@@ -269,6 +269,7 @@ return {
         [".clangd"] = function(ctx)
           return editor.clangd("c++" .. (ctx.standard or "20"))
         end,
+        [".clang-format"] = editor.clang_format,
         [".gitignore"] = table.concat({
           "/build/",
           "*.user",

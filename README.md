@@ -100,7 +100,7 @@ Other screens use `q` to close and may add `r` (refresh) or `i` (install plan).
 | `:ScaffoldInstall [tool]` | Build and confirm an install command for a tool. |
 | `:ScaffoldTemplates [language]` | Browse templates. |
 | `:ScaffoldRemove [project]` | Remove a project from the registry. **Files are kept.** |
-| `:ScaffoldRepair [project\|dir]` | Add the missing `compile_flags.txt`/`.clangd` to an existing C/C++ project (never overwrites). |
+| `:ScaffoldRepair [project\|dir]` | Add the missing `compile_flags.txt`/`.clangd`/`.clang-format` to an existing C/C++ project (never overwrites). |
 | `:ScaffoldCancel` | List running Scaffold commands and cancel one. |
 
 Commands complete project names, directories, language ids, and tool names

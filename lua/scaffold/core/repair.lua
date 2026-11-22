@@ -1,5 +1,5 @@
 -- Backfill editor/toolchain hints into C/C++ projects that were created before
--- compile_flags.txt + .clangd existed.
+-- compile_flags.txt + .clangd + .clang-format existed.
 --
 -- Reads the standard and include paths from the project itself (CMakeLists.txt
 -- or Makefile), then writes the missing files. Existing files are never
@@ -138,6 +138,7 @@ local function files_for(project)
   return {
     { path = fs.join(project.dir, "compile_flags.txt"), content = editor.compile_flags(std, project.includes) },
     { path = fs.join(project.dir, ".clangd"), content = editor.clangd(std, mode) },
+    { path = fs.join(project.dir, ".clang-format"), content = editor.clang_format() },
   }
 end
 
